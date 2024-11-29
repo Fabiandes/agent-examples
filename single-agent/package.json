@@ -1,0 +1,28 @@
+{
+  "name": "single-agent",
+  "version": "1.0.0",
+  "description": "An agent is a syste that uses an LLM to decide the control flow of an application. This example showcases a **Hotel Booking Agent** which can: - Answer FAQs that the customer might have. - Provide information about hotels. - Provide availability and pricing information for hotels. - Allow the user to book a hotel.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.5",
+    "gts": "^6.0.2",
+    "typescript": "^5.6.3"
+  }
+}
