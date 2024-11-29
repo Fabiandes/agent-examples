@@ -4,13 +4,13 @@
   "description": "An agent is a syste that uses an LLM to decide the control flow of an application. This example showcases a **Hotel Booking Agent** which can: - Answer FAQs that the customer might have. - Provide information about hotels. - Provide availability and pricing information for hotels. - Allow the user to book a hotel.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc -p .",
     "dev": "nodemon src/server.ts",
     "fix": "gts fix",
-    "start": "NODE_PATH=./build node build/src/server.js"  
+    "start": "NODE_PATH=./build node build/src/server.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -19,10 +19,14 @@
     "express": "^4.21.1"
   },
   "devDependencies": {
+    "@jest/globals": "^29.7.0",
     "@types/express": "^5.0.0",
     "@types/node": "^22.7.5",
+    "@types/supertest": "^6.0.2",
     "gts": "^6.0.2",
     "nodemon": "^3.1.7",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
   }
