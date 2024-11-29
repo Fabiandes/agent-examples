@@ -7,11 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "gts lint",
     "clean": "gts clean",
-    "compile": "tsc",
+    "compile": "tsc -p .",
+    "dev": "nodemon src/server.ts",
     "fix": "gts fix",
-    "prepare": "npm run compile",
-    "pretest": "npm run compile",
-    "posttest": "npm run lint"
+    "start": "NODE_PATH=./build node build/src/server.js"  
   },
   "keywords": [],
   "author": "",
@@ -23,6 +22,8 @@
     "@types/express": "^5.0.0",
     "@types/node": "^22.7.5",
     "gts": "^6.0.2",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
   }
 }
